@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+@import './styles/variables.css';
+
+@layer base {
+  html, body, #root {
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply antialiased selection:bg-engmax-brand/20 selection:text-white;
+  }
+
+  .flashcard-face {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Plain component classes using design tokens (avoid Tailwind candidate validation) */
+.input-engmax {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-engmax);
+  border: 1px solid var(--color-engmax-border);
+  background-color: var(--color-engmax-surface);
+  color: var(--color-engmax-text);
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-engmax::placeholder {
+  color: var(--color-engmax-text-muted);
+}
+
+.input-engmax:focus {
+  border-color: var(--color-engmax-brand);
+  box-shadow: 0 0 0 2px rgba(0, 153, 221, 0.15);
+}
+
+.btn-engmax {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  border-radius: var(--radius-engmax);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* RTL text direction for Arabic content */
+.rtl-text {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Segoe UI', 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', Arial, sans-serif;
+}
+
+/* Ensure the flashcard container respects dir attribute */
+.flashcard-face[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Arabic cards use a friendly Arabic-friendly font stack */
+.ar-text {
+  font-family: 'Segoe UI', 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', Arial, sans-serif;
+}

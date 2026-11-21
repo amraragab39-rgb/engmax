@@ -1,0 +1,22 @@
+{
+  "name": "ENGMAX — Vocabulary Builder",
+  "short_name": "ENGMAX",
+  "description": "Flashcard-based vocabulary learning app. Learn new words in Spanish, French, German and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0099dd",
+  "id": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x46",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "reference"],
+  "lang": "en",
+  "dir": "ltr"
+}
